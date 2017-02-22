@@ -1,4 +1,4 @@
-import Sequelize from 'Sequelize';
+import Sequelize from 'sequelize';
 import connect from '../connect';
 export const Author = connect.define('author', {
     name: {
@@ -9,7 +9,8 @@ Author.sync();
 
 export const AuthorSchema = `
     type Author {
-        name: String!
+        name: String!,
+        createdAt: String!
     }
 `;
 

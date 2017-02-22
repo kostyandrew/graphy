@@ -1,4 +1,4 @@
-import Sequelize from 'Sequelize';
+import Sequelize from 'sequelize';
 export default new Sequelize('node_app', 'root', 'password', {
     host: 'postgres',
     dialect: 'postgres',
