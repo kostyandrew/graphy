@@ -1,13 +1,12 @@
 import {MyGraphQLSchema} from 'graphql';
 import graphqlHTTP from 'express-graphql';
 import express from 'express';
-import {GraphQLSchema, root} from './app/db';
+import $Schema from './app/schema';
 
 const app = express();
 
 app.use('/graphql', graphqlHTTP({
-    schema: GraphQLSchema,
-    rootValue: root,
+    schema: $Schema,
     graphiql: true
 }));
 
