@@ -4,12 +4,10 @@ services:
     build: ./node
     links:
     - postgres
-    environment:
-    - WORDPRESS_DB_PASSWORD=password
     volumes:
     - ../:/usr/src/app
     ports:
-    - "80:8080"
+    - "7100:8080"
   postgres:
     image: postgres
     environment:
@@ -17,4 +15,4 @@ services:
     - POSTGRES_DB=node_app
     - POSTGRES_USER=root
     ports:
-    - "5432:5432"
+    - "7400:5432"

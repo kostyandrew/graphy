@@ -1,6 +1,6 @@
-build:
-	docker-compose -f .docker/docker-compose.yml build
+init:
+	docker-compose -p "graphy" -f .docker/docker-compose.yml build
 start:
-	docker-compose -f .docker/docker-compose.yml up
+	docker-compose -p "graphy" -f .docker/docker-compose.yml up
 stop:
-	docker-compose -f .docker/docker-compose.yml stop
+	docker-compose -p "graphy" -f .docker/docker-compose.yml stop
